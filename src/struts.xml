@@ -3,6 +3,20 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
-
 <struts>
+        <constant name="struts.devMode" value="false"/>
+        <constant name="struts.objectFactory" value="spring"/>
+
+        <package name="user" namespace="/" extends="struts-default">
+        <action name="login" class="com.atguigu.action.TestAction" method="login">
+            <result name="success">/success.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="register" class="com.atguigu.action.TestAction" method="register">
+            <result name="success">/index.jsp</result>
+            <result name="error">/register.jsp</result>
+        </action>
+        </package>
+
 </struts>
