@@ -1,12 +1,20 @@
 package com.atguigu.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Created by Tian on 2017/8/23.
  */
+
+@Repository
+@Transactional
+@Scope("prototype")
 public class BaseDAOImpl implements  BaseDAO {
 
     private HibernateTemplate hibernateTemplate;
@@ -15,6 +23,7 @@ public class BaseDAOImpl implements  BaseDAO {
         return hibernateTemplate;
     }
 
+    @Autowired
     public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
         this.hibernateTemplate = hibernateTemplate;
     }
