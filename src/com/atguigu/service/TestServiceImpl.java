@@ -19,22 +19,22 @@ public class TestServiceImpl implements TestService{
     private BaseDAO baseDAO;
 
     @Override
-    public Test checkLogin(String author, String title) {
+    public Test checkLogin(String username, String userpwed) {
 
         Test u = new Test();
-        u.setAuthor(author);
-        u.setTitle(title);
+        u.setUsername(username);
+        u.setUserpwd(userpwed);
         List tests = baseDAO.find(u);
         if (tests.size() != 0) return (Test) tests.get(0);
         return null;
     }
 
     @Override
-    public boolean register(String author, String title) {
+    public boolean register(String username, String userpwed) {
 
         Test u = new Test();
-        u.setAuthor(author);
-        u.setTitle(title);
+        u.setUsername(username);
+        u.setUserpwd(userpwed);
         List tests = baseDAO.find(u);
         return tests.size() == 0 && baseDAO.add(u);
     }
