@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - hibernate5@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hibernate5">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="0420activiti"/>
+    <schema id="4" parent="1" name="0420email"/>
+    <schema id="5" parent="1" name="atguigu"/>
+    <schema id="6" parent="1" name="company"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mybatis170420"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="school"/>
+    <schema id="11" parent="1" name="scw_0420"/>
+    <schema id="12" parent="1" name="world"/>
+    <table id="13" parent="2" name="test"/>
+    <column id="14" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="13" name="AUTHOR">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="16" parent="13" name="DATE">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="17" parent="13" name="TITLE">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="18" parent="13" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
