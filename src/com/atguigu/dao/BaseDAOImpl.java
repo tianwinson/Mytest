@@ -55,5 +55,6 @@ public class BaseDAOImpl implements  BaseDAO {
     @Override
     public List find(Object o) {
         return this.getHibernateTemplate().findByExample(o);
+
     }
 }
