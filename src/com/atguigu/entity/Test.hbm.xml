@@ -5,9 +5,8 @@
 <hibernate-mapping>
 
     <class name="com.atguigu.entity.Test" table="test" schema="hibernate5">
-        <id name="id" column="ID"/>
-        <property name="author" column="AUTHOR"/>
-        <property name="date" column="DATE"/>
-        <property name="title" column="TITLE"/>
+        <id name="id" column="id"/>
+        <property name="username" column="username"/>
+        <property name="userpwd" column="userpwd"/>
     </class>
 </hibernate-mapping>
