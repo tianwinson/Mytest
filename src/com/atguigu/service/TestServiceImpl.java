@@ -25,6 +25,7 @@ public class TestServiceImpl implements TestService{
         u.setUsername(username);
         u.setUserpwd(userpwed);
         List tests = baseDAO.find(u);
+        System.out.println("tests = " + tests);
         if (tests.size() != 0) return (Test) tests.get(0);
         return null;
     }
@@ -37,6 +38,12 @@ public class TestServiceImpl implements TestService{
         u.setUserpwd(userpwed);
         List tests = baseDAO.find(u);
         return tests.size() == 0 && baseDAO.add(u);
+
+    }
+
+    public void test(){
+        System.out.println("ddd");
+
     }
 
 
