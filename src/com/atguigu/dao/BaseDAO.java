@@ -15,4 +15,7 @@ public interface BaseDAO {
 
     List find(Object o);
 
+
+
+
 }
